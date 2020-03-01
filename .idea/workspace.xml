@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="887c7d5d-6e3d-4f22-81c5-cdf59e6e69ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swagger-client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/swagger-client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swagger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/swagger.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/swagger.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/swagger.test.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,24 +33,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENSE">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jest.config.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/swagger.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state relative-caret-position="218">
+              <caret line="46" column="41" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="41" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -56,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/openapi-types.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+            <state relative-caret-position="188">
+              <caret line="523" column="25" lean-forward="true" selection-start-line="523" selection-start-column="25" selection-end-line="523" selection-end-column="25" />
               <folding>
                 <element signature="n#!!block;n#Document#0;n#OpenAPIV3#0" />
                 <element signature="n#!!block;n#InfoObject#0;n#OpenAPIV3#0" />
@@ -69,16 +60,18 @@
                 <element signature="n#!!block;n#ExternalDocumentationObject#0;n#OpenAPIV3#0" />
                 <element signature="n#!!block;n#ParameterObject#0;n#OpenAPIV3#0" />
                 <element signature="n#!!block;n#ParameterBaseObject#0;n#OpenAPIV3#0" />
+                <element signature="n#!!block;n#Document#0;n#OpenAPIV2#0" />
+                <element signature="n#!!block;n#TagObject#0;n#OpenAPIV2#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/swagger-client.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="366">
+              <caret line="134" column="12" lean-forward="true" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -86,11 +79,65 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/swagger-client.test.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="278" column="23" lean-forward="true" selection-start-line="278" selection-start-column="23" selection-end-line="278" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="459" column="4" selection-start-line="459" selection-start-column="4" selection-end-line="459" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/swagger.test.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="128" column="35" lean-forward="true" selection-start-line="126" selection-start-column="8" selection-end-line="128" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/plugins/axios-http-client.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-83">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="240">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -104,6 +151,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>parameters</find>
+      <find>ParameterObject</find>
+      <find>OperationNotFoundError</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -113,19 +167,14 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/types.ts" />
         <option value="$PROJECT_DIR$/src/openapi-types.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/http-client.ts" />
         <option value="$PROJECT_DIR$/src/utils.ts" />
+        <option value="$PROJECT_DIR$/src/plugins/http-client.ts" />
         <option value="$PROJECT_DIR$/src/swagger.ts" />
+        <option value="$PROJECT_DIR$/test/swagger.test.ts" />
         <option value="$PROJECT_DIR$/src/swagger-client.ts" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/hotpot-swagger-client.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/test/swagger-client.test.ts" />
       </list>
     </option>
   </component>
@@ -153,6 +202,17 @@
               <item name="hotpot-swagger-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="hotpot-swagger-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotpot-swagger-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotpot-swagger-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotpot-swagger-client" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -160,6 +220,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -167,9 +228,16 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/plugins" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -183,6 +251,86 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Jest.SwaggerClient.params in body">
+    <configuration name="SwaggerClient" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/test/swagger-client.test.ts" />
+      <test-names>
+        <test-name value="SwaggerClient" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="SwaggerClient.operation key is the path" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/swagger-client.test.ts" />
+      <test-names>
+        <test-name value="SwaggerClient" />
+        <test-name value="operation key is the path" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="SwaggerClient.operation not found throw" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/swagger-client.test.ts" />
+      <test-names>
+        <test-name value="SwaggerClient" />
+        <test-name value="operation not found throw" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="SwaggerClient.params in body" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/swagger-client.test.ts" />
+      <test-names>
+        <test-name value="SwaggerClient" />
+        <test-name value="params in body" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="SwaggerClient.schema not allow error throw" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/swagger-client.test.ts" />
+      <test-names>
+        <test-name value="SwaggerClient" />
+        <test-name value="schema not allow error throw" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.SwaggerClient.params in body" />
+        <item itemvalue="Jest.SwaggerClient" />
+        <item itemvalue="Jest.SwaggerClient.schema not allow error throw" />
+        <item itemvalue="Jest.SwaggerClient.operation not found throw" />
+        <item itemvalue="Jest.SwaggerClient.operation key is the path" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -193,29 +341,61 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582989821731</updated>
-      <workItem from="1582989822936" duration="4472000" />
+      <workItem from="1582989822936" duration="14269000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="SwaggerClient_operation_key_is_the_path - 2020.03.02 at 02h 12m 53s.xml">
+      <configuration name="SwaggerClient.operation key is the path" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="SwaggerClient_operation_key_is_the_path - 2020.03.02 at 02h 13m 07s.xml">
+      <configuration name="SwaggerClient.operation key is the path" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="SwaggerClient_operation_not_found_throw - 2020.03.02 at 02h 14m 38s.xml">
+      <configuration name="SwaggerClient.operation not found throw" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="SwaggerClient_operation_not_found_throw - 2020.03.02 at 02h 15m 48s.xml">
+      <configuration name="SwaggerClient.operation not found throw" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="SwaggerClient_schema_not_allow_error_throw - 2020.03.02 at 02h 17m 30s.xml">
+      <configuration name="SwaggerClient.schema not allow error throw" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="SwaggerClient_schema_not_allow_error_throw - 2020.03.02 at 02h 17m 43s.xml">
+      <configuration name="SwaggerClient.schema not allow error throw" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="SwaggerClient - 2020.03.02 at 02h 17m 51s.xml">
+      <configuration name="SwaggerClient" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="SwaggerClient_params_in_body - 2020.03.02 at 02h 21m 48s.xml">
+      <configuration name="SwaggerClient.params in body" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="SwaggerClient_params_in_body - 2020.03.02 at 02h 22m 31s.xml">
+      <configuration name="SwaggerClient.params in body" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="SwaggerClient_params_in_body - 2020.03.02 at 02h 23m 45s.xml">
+      <configuration name="SwaggerClient.params in body" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4472000" />
+    <option name="totallyTimeSpent" value="14269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="980" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24984913" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24984913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3295711" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39954853" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -231,19 +411,12 @@
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jest.config.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -255,10 +428,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugins/axios-http-client.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="459" column="4" selection-start-line="459" selection-start-column="4" selection-end-line="459" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/openapi-types.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+        <state relative-caret-position="188">
+          <caret line="523" column="25" lean-forward="true" selection-start-line="523" selection-start-column="25" selection-end-line="523" selection-end-column="25" />
           <folding>
             <element signature="n#!!block;n#Document#0;n#OpenAPIV3#0" />
             <element signature="n#!!block;n#InfoObject#0;n#OpenAPIV3#0" />
@@ -270,26 +474,48 @@
             <element signature="n#!!block;n#ExternalDocumentationObject#0;n#OpenAPIV3#0" />
             <element signature="n#!!block;n#ParameterObject#0;n#OpenAPIV3#0" />
             <element signature="n#!!block;n#ParameterBaseObject#0;n#OpenAPIV3#0" />
+            <element signature="n#!!block;n#Document#0;n#OpenAPIV2#0" />
+            <element signature="n#!!block;n#TagObject#0;n#OpenAPIV2#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/swagger.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state relative-caret-position="218">
+          <caret line="46" column="41" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="41" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/swagger.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="128" column="35" lean-forward="true" selection-start-line="126" selection-start-column="8" selection-end-line="128" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/swagger-client.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        <state relative-caret-position="366">
+          <caret line="134" column="12" lean-forward="true" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/swagger-client.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="278" column="23" lean-forward="true" selection-start-line="278" selection-start-column="23" selection-end-line="278" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
