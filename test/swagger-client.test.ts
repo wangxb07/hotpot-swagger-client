@@ -316,9 +316,7 @@ describe('SwaggerClient', () => {
         name: "store name",
         address: "Street 1, Ningbo, Zhejiang"
       },
-      headers: {
-        token: "myaccesstoken"
-      }
+      token: "myaccesstoken",
     };
 
     const options = client.buildRequestOptions("updateStore", params);

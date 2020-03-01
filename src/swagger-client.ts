@@ -129,9 +129,9 @@ export default class SwaggerClient {
           })
         }
 
-        if (dp.in === 'header' &&  params.headers[dp.name] !== undefined) {
+        if (dp.in === 'header' &&  params[dp.name] !== undefined) {
           headers = Object.assign({}, headers, {
-            [dp.name]: params.headers[dp.name],
+            [dp.name]: params[dp.name],
           })
         }
       });
