@@ -1,4 +1,4 @@
-# hotpat-swagger-client
+# hotpot-swagger-client
 Simple swagger client by typescript
 
 ## Usage
