@@ -36,30 +36,14 @@ export default class Swagger{
   constructor(options: SwaggerOptions) {
     this._spec = options.spec;
     this._httpClient = options.httpClient;
-    this._url = options.url
   }
 
   get baseUrl(): string {
     return this._spec.host + this._spec.basePath;
   }
 
-  async fetchSpec(url: string){
-    if(!url) return;
-
-    const response = await this.fetch(url, {
-        method: "GET"
-      });
-    this._url = url;
-    this._spec = response.data;
-    return this
-  }
-
   get spec(): OpenAPIV2.Document {
     return this._spec;
-  }
-
-  get url(): String {
-    return this._url;
   }
 
   fetch(url: string, options: FetchOptions): Promise<any> {
