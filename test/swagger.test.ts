@@ -1,5 +1,7 @@
 import Swagger, {TagOperationNotFoundError} from "../src/swagger";
 import AxiosHttpClient from "../src/plugins/axios-http-client";
+import SwaggerClient from "../src/swagger-client";
+import {buildSwaggerByUrl} from "../src/swagger"
 
 describe('Swagger', () => {
   test('can be instantiated', () => {
@@ -134,4 +136,13 @@ describe('Swagger', () => {
 
     expect(() => swagger.get('search')).toThrow(TagOperationNotFoundError);
   });
+  
+  test("url",async () => {
+    const swagger = await buildSwaggerByUrl({
+      url: "http://petstore.swagger.io/v2/swagger.json",
+      httpClient: new AxiosHttpClient()
+    })
+    expect(swagger.get('pet')).toBeInstanceOf(SwaggerClient)
+  })
+
 });
