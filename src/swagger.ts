@@ -2,10 +2,10 @@ import {OpenAPIV2, OpenAPIV3} from "./openapi-types";
 import SwaggerClient from "./swagger-client";
 import {FetchableInterface, Dict, FetchOptions, Method} from "./utils";
 import OperationObject = OpenAPIV3.OperationObject;
-
 interface SwaggerOptions {
-  spec: OpenAPIV2.Document;
+  spec?: OpenAPIV2.Document;
   httpClient: FetchableInterface;
+  url?: string;
 }
 
 export interface OperationsDict {
@@ -20,9 +20,18 @@ export class TagOperationNotFoundError implements Error {
   name: string;
 }
 
-export default class Swagger {
+export async function buildSwaggerByUrl(options: SwaggerOptions) {
+  const a = await options.httpClient.fetch(options.url,{method:"GET"})
+  return new Swagger({
+    ...options,
+    spec: a.data
+  })
+}
+
+export default class Swagger{
   private _spec: OpenAPIV2.Document;
   private _httpClient: FetchableInterface;
+  private _url: string;
 
   constructor(options: SwaggerOptions) {
     this._spec = options.spec;
