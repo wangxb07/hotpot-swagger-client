@@ -39,6 +39,7 @@ export default class SwaggerClient {
     }
 
     if (this._operations['path:' + name] === undefined) {
+      console.error("OperationNotFoundError");
       throw new OperationNotFoundError();
     }
 
@@ -62,20 +63,25 @@ export default class SwaggerClient {
 
         if (dp.required) {
           if (params[dp.name] === undefined) {
+            console.error("RequiredParameterMissError");
             throw new RequiredParameterMissError();
           }
         }
 
         if (dp.in === 'path') {
+          if (params[dp.name] === undefined) {
+            console.error("RequiredParameterMissError in path");
+            throw new RequiredParameterMissError();
+          }
           path = path.replace(`{${dp.name}}`, params[dp.name]);
         }
 
-        if (dp.in === 'query') {
+        if (dp.in === 'query' && params[dp.name] !== undefined) {
           if (path.match(/\?/) === null) {
-            path = `${path}?${dp.name}=${params[dp.name]}`;
+            path = `${path}?${dp.name}=${encodeURIComponent(params[dp.name])}`;
           }
           else {
-            path = `${path}&${dp.name}=${params[dp.name]}`;
+            path = `${path}&${dp.name}=${encodeURIComponent(params[dp.name])}`;
           }
         }
       });
@@ -84,6 +90,7 @@ export default class SwaggerClient {
     if (params['schema'] !== undefined) {
 
       if (spec.schemes[params['schema']] === undefined) {
+        console.error("SchemaNotAllowError");
         throw new SchemaNotAllowError();
       }
 

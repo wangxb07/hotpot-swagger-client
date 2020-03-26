@@ -28,7 +28,7 @@ export async function buildSwaggerByUrl(options: SwaggerOptions) {
   })
 }
 
-export default class Swagger{
+export default class Swagger {
   private _spec: OpenAPIV2.Document;
   private _httpClient: FetchableInterface;
   private _url: string;
@@ -53,6 +53,7 @@ export default class Swagger{
   get(tag: string): SwaggerClient {
     const operations = this.getOperationsByTag(tag);
     if (Object.keys(operations).length === 0) {
+      console.error("TagOperationNotFoundError");
       throw new TagOperationNotFoundError();
     }
     return new SwaggerClient(operations, this);
