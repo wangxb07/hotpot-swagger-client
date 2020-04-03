@@ -303,6 +303,40 @@ describe('SwaggerClient', () => {
                 "type": "string"
               }],
             }
+          },
+          '/store': {
+            'post': {
+              'tags': ['store'],
+              'operationId': 'addStore',
+              "consumes": ["application/json"],
+              'produces': ['application/json'],
+              'parameters': [{
+                'name': 'body',
+                'in': 'body',
+                'required': true,
+                'schema': {
+                  '$ref': '#/definitions/QualityStandardItem'
+                }
+              }, {
+                "in" : "header",
+                "name" : "token",
+                "type": "string"
+              }],
+              'responses': {
+                '200': {
+                  'description': 'successful operation',
+                  'schema': {
+                    '$ref': '#/definitions/ApiResponse'
+                  }
+                },
+                '400': {
+                  'description': 'Invalid ID supplied'
+                },
+                '404': {
+                  'description': 'qualityStandardItem not found'
+                }
+              }
+            }
           }
         }
       },
@@ -329,6 +363,29 @@ describe('SwaggerClient', () => {
       body: {
         name: "store name",
         address: "Street 1, Ningbo, Zhejiang"
+      }
+    });
+
+    const options2 = client.buildRequestOptions("addStore", {
+      body: {
+        name: "store name",
+        address: "Street 1, Ningbo, Zhejiang",
+        createdBy: "wangxianbin"
+      },
+      token: "myaccesstoken1",
+    });
+
+    expect(options2).toEqual({
+      method: "post",
+      headers: {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "token": 'myaccesstoken1',
+      },
+      body: {
+        name: "store name",
+        address: "Street 1, Ningbo, Zhejiang",
+        createdBy: "wangxianbin"
       }
     });
   });

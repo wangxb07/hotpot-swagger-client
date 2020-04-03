@@ -114,7 +114,7 @@ export default class SwaggerClient {
 
     if (op.operation.produces !== undefined) {
       headers = Object.assign(headers, {
-        'accept': op.operation.produces
+        'accept': op.operation.produces.join(";")
       })
     }
 
