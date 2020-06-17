@@ -2,10 +2,17 @@ import {OpenAPIV2, OpenAPIV3} from "./openapi-types";
 import SwaggerClient from "./swagger-client";
 import {FetchableInterface, Dict, FetchOptions, Method} from "./utils";
 import OperationObject = OpenAPIV3.OperationObject;
+
+
+interface DefaultParams {
+  schema: string
+}
+
 interface SwaggerOptions {
   spec?: OpenAPIV2.Document;
   httpClient: FetchableInterface;
   url?: string;
+  defaultParams?: DefaultParams
 }
 
 export interface OperationsDict {
@@ -32,10 +39,15 @@ export default class Swagger {
   private _spec: OpenAPIV2.Document;
   private _httpClient: FetchableInterface;
   private _url: string;
+  private _defaultParams: DefaultParams;
 
   constructor(options: SwaggerOptions) {
     this._spec = options.spec;
     this._httpClient = options.httpClient;
+
+    if (options.defaultParams) {
+      this._defaultParams = options.defaultParams;
+    }
   }
 
   get baseUrl(): string {
@@ -56,7 +68,11 @@ export default class Swagger {
       console.error("TagOperationNotFoundError");
       throw new TagOperationNotFoundError();
     }
-    return new SwaggerClient(operations, this);
+    const c = new SwaggerClient(operations, this);
+    if (this._defaultParams) {
+      c.defaultParams = this._defaultParams;
+    }
+    return c
   }
 
   getOperationsByTag(tag: string): Dict<OperationsDict> {

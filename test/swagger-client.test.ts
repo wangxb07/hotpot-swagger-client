@@ -456,5 +456,57 @@ describe('SwaggerClient', () => {
       })
     }).toThrow(RequiredParameterMissError);
 
+  });
+
+  test('default parameters test', () => {
+    const swagger = new Swagger({
+      spec: {
+        swagger: '2.0',
+        info: {
+          version: '1.0.0',
+          title: 'My test',
+          description: 'The swagger spec description'
+        },
+        tags: [{
+          name: 'store',
+        }],
+        host: "www.example.com",
+        basePath: "/store/1.0.0",
+        schemes: ["http", "https"],
+        paths: {
+          '/store/{store_uuid}': {
+            "post": {
+              "consumes": ["application/json"],
+              "operationId": "updateStore",
+              "tags": ["store"],
+              "parameters" : [ {
+                "in" : "path",
+                "name" : "store_uuid",
+              }, {
+                "in" : "query",
+                "name" : "name",
+              }, {
+                "in" : "header",
+                "name" : "token",
+                "type": "string"
+              }],
+            }
+          }
+        }
+      },
+      httpClient: new AxiosHttpClient(),
+      defaultParams: {
+        schema: "https"
+      }
+    });
+
+    expect(swagger.get("store").buildUrl("updateStore", {
+      body: {
+        address: "Street 1, Ningbo, Zhejiang"
+      },
+      store_uuid: "1",
+      name: "store name",
+      token: "myaccesstoken",
+    })).toEqual('https://www.example.com/store/1.0.0/store/1?name=store%20name');
   })
 });

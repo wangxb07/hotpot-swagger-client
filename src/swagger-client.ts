@@ -20,10 +20,19 @@ export class SchemaNotAllowError implements Error {
 export default class SwaggerClient {
   private _operations: Dict<OperationsDict>;
   private _swagger: Swagger;
+  private _defaultParams: any;
 
   constructor(operations: Dict<OperationsDict>, swagger: Swagger) {
     this._operations = operations;
     this._swagger = swagger;
+  }
+
+  get defaultParams(): any {
+    return this._defaultParams;
+  }
+
+  set defaultParams(value: any) {
+    this._defaultParams = value;
   }
 
   exec(operation: string, parameters: any): Promise<any> {
@@ -47,6 +56,10 @@ export default class SwaggerClient {
   }
 
   buildUrl(operation: string, params: any): string {
+    if (this._defaultParams) {
+      params = Object.assign({}, this._defaultParams, params)
+    }
+
     const op = this._getOperation(operation);
     const spec = this._swagger.spec;
 
@@ -88,8 +101,8 @@ export default class SwaggerClient {
     }
 
     if (params['schema'] !== undefined) {
-
-      if (spec.schemes[params['schema']] === undefined) {
+      const i = spec.schemes.findIndex((s) => s === params['schema']);
+      if (i < 0) {
         console.error("SchemaNotAllowError");
         throw new SchemaNotAllowError();
       }
@@ -101,6 +114,10 @@ export default class SwaggerClient {
   }
 
   buildRequestOptions(operation: string, params: any): FetchOptions {
+    if (this._defaultParams) {
+      params = Object.assign({}, this._defaultParams, params)
+    }
+
     const op = this._getOperation(operation);
 
     let headers = {};
