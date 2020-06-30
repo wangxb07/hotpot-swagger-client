@@ -136,7 +136,7 @@ describe('Swagger', () => {
 
     expect(() => swagger.get('search')).toThrow(TagOperationNotFoundError);
   });
-  
+
   test("url",async () => {
     const swagger = await buildSwaggerByUrl({
       url: "http://petstore.swagger.io/v2/swagger.json",

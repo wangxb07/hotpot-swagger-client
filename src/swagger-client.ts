@@ -74,7 +74,7 @@ export default class SwaggerClient {
         }
         const dp: OpenAPIV2.Parameter = p as OpenAPIV2.Parameter;
 
-        if (dp.required) {
+        if (dp.required && dp.in !== 'body') {
           if (params[dp.name] === undefined) {
             console.error("RequiredParameterMissError");
             throw new RequiredParameterMissError();
