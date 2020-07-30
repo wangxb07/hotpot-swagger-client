@@ -227,52 +227,6 @@ describe('SwaggerClient', () => {
     expect(() => client.buildUrl("updateStore", params)).toThrow(OperationNotFoundError);
   });
 
-  test('schema not allow error throw', () => {
-    const swagger = new Swagger({
-      spec: {
-        swagger: '2.0',
-        info: {
-          version: '1.0.0',
-          title: 'My test',
-          description: 'The swagger spec description'
-        },
-        tags: [{
-          name: 'store',
-        }],
-        host: "www.example.com",
-        basePath: "/store/1.0.0",
-        schemes: ["http"],
-        paths: {
-          '/store/{store_uuid}': {
-            "get": {
-              "consumes": ["application/json"],
-              "summary": "获取商店评分",
-              "operationId": "getStoreScoreByUuid",
-              "tags": ["store"],
-              "parameters" : [ {
-                "in" : "path",
-                "name" : "store_uuid",
-                "description" : "the store uuid",
-                "required" : true,
-                "type" : "string"
-              }],
-            }
-          }
-        }
-      },
-      httpClient: new AxiosHttpClient()
-    });
-
-    const client = swagger.get('store');
-
-    const params = {
-      store_uuid: "1",
-      schema: 'https'
-    };
-
-    expect(() => client.buildUrl("getStoreScoreByUuid", params)).toThrow(SchemaNotAllowError);
-  });
-
   test('params in body with token header', () => {
     const swagger = new Swagger({
       spec: {

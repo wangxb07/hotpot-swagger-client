@@ -101,12 +101,6 @@ export default class SwaggerClient {
     }
 
     if (params['schema'] !== undefined) {
-      const i = spec.schemes.findIndex((s) => s === params['schema']);
-      if (i < 0) {
-        console.error("SchemaNotAllowError");
-        throw new SchemaNotAllowError();
-      }
-
       schema = params['schema'];
     }
 
