@@ -1,6 +1,6 @@
 import Swagger from "../src/swagger";
-import AxiosHttpClient from "../src/plugins/axios-http-client";
-import SwaggerClient, {RequiredParameterMissError, OperationNotFoundError, SchemaNotAllowError} from "../src/swagger-client";
+import SwaggerClient, {RequiredParameterMissError, OperationNotFoundError} from "../src/swagger-client";
+import axios from "axios";
 
 describe('SwaggerClient', () => {
   test('get client from swagger', () => {
@@ -23,7 +23,7 @@ describe('SwaggerClient', () => {
           }
         }
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     const client = swagger.get('store');
@@ -63,7 +63,7 @@ describe('SwaggerClient', () => {
           }
         }
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     const client = swagger.get('store');
@@ -117,7 +117,7 @@ describe('SwaggerClient', () => {
           }
         }
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     const client = swagger.get('store');
@@ -161,7 +161,7 @@ describe('SwaggerClient', () => {
           }
         }
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     const client = swagger.get('store');
@@ -215,7 +215,7 @@ describe('SwaggerClient', () => {
           }
         }
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     const client = swagger.get('store');
@@ -294,7 +294,7 @@ describe('SwaggerClient', () => {
           }
         }
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     const client = swagger.get('store');
@@ -380,7 +380,7 @@ describe('SwaggerClient', () => {
           }
         }
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     expect(swagger.get("store").buildUrl("updateStore", {
@@ -448,7 +448,7 @@ describe('SwaggerClient', () => {
           }
         }
       },
-      httpClient: new AxiosHttpClient(),
+      httpClient: axios,
       defaultParams: {
         schema: "https"
       }

@@ -1,7 +1,5 @@
 import Swagger, {TagOperationNotFoundError} from "../src/swagger";
-import AxiosHttpClient from "../src/plugins/axios-http-client";
-import SwaggerClient from "../src/swagger-client";
-import {buildSwaggerByUrl} from "../src/swagger"
+import axios from "axios";
 
 describe('Swagger', () => {
   test('can be instantiated', () => {
@@ -18,7 +16,7 @@ describe('Swagger', () => {
         }],
         paths: {}
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     expect(swagger).toBeInstanceOf(Swagger);
@@ -62,7 +60,7 @@ describe('Swagger', () => {
           }
         }
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     const storeOperations = swagger.getOperationsByTag('store');
@@ -106,7 +104,7 @@ describe('Swagger', () => {
         schemes: ["http", "https"],
         paths: {}
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     expect(swagger.baseUrl).toEqual("www.example.com/store/1.0.0");
@@ -131,18 +129,9 @@ describe('Swagger', () => {
         schemes: ["http", "https"],
         paths: {}
       },
-      httpClient: new AxiosHttpClient()
+      httpClient: axios
     });
 
     expect(() => swagger.get('search')).toThrow(TagOperationNotFoundError);
   });
-
-  test("url",async () => {
-    const swagger = await buildSwaggerByUrl({
-      url: "http://petstore.swagger.io/v2/swagger.json",
-      httpClient: new AxiosHttpClient()
-    })
-    expect(swagger.get('pet')).toBeInstanceOf(SwaggerClient)
-  })
-
 });

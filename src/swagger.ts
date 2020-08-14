@@ -1,7 +1,8 @@
 import {OpenAPIV2, OpenAPIV3} from "./openapi-types";
 import SwaggerClient from "./swagger-client";
-import {FetchableInterface, Dict, FetchOptions, Method} from "./utils";
+import {Dict, FetchOptions, Method} from "./utils";
 import OperationObject = OpenAPIV3.OperationObject;
+import {AxiosInstance} from "axios";
 
 
 interface DefaultParams {
@@ -10,7 +11,7 @@ interface DefaultParams {
 
 interface SwaggerOptions {
   spec?: OpenAPIV2.Document;
-  httpClient: FetchableInterface;
+  httpClient: AxiosInstance;
   url?: string;
   defaultParams?: DefaultParams
 }
@@ -27,17 +28,9 @@ export class TagOperationNotFoundError implements Error {
   name: string;
 }
 
-export async function buildSwaggerByUrl(options: SwaggerOptions) {
-  const a = await options.httpClient.fetch(options.url,{method:"GET"})
-  return new Swagger({
-    ...options,
-    spec: a.data
-  })
-}
-
 export default class Swagger {
   private _spec: OpenAPIV2.Document;
-  private _httpClient: FetchableInterface;
+  private _httpClient: AxiosInstance;
   private _url: string;
   private _defaultParams: DefaultParams;
 
@@ -59,7 +52,7 @@ export default class Swagger {
   }
 
   fetch(url: string, options: FetchOptions): Promise<any> {
-    return this._httpClient.fetch(url, options);
+    return this._httpClient.request(options);
   }
 
   get(tag: string): SwaggerClient {
