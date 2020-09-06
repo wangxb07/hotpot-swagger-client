@@ -77,7 +77,7 @@ describe('SwaggerClient', () => {
     expect(url).toEqual('http://www.example.com/store/1.0.0/store/1');
     expect(options).toEqual({
       method: 'get',
-      body: {},
+      data: {},
       headers: {
         'content-type': "application/json",
       }
@@ -176,7 +176,7 @@ describe('SwaggerClient', () => {
     expect(url).toEqual('http://www.example.com/store/1.0.0/store/1');
     expect(options).toEqual({
       method: 'get',
-      body: {},
+      data: {},
       headers: {
         'content-type': "application/json",
       }
@@ -314,7 +314,7 @@ describe('SwaggerClient', () => {
         "content-type": "application/json",
         "token": 'myaccesstoken',
       },
-      body: {
+      data: {
         name: "store name",
         address: "Street 1, Ningbo, Zhejiang"
       }
@@ -336,7 +336,7 @@ describe('SwaggerClient', () => {
         "content-type": "application/json",
         "token": 'myaccesstoken1',
       },
-      body: {
+      data: {
         name: "store name",
         address: "Street 1, Ningbo, Zhejiang",
         createdBy: "wangxianbin"

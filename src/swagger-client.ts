@@ -38,7 +38,6 @@ export default class SwaggerClient {
   exec(operation: string, parameters: any): Promise<any> {
     const url = this.buildUrl(operation, parameters);
     const options = this.buildRequestOptions(operation, parameters);
-
     return this._swagger.fetch(url, options);
   }
 
@@ -158,7 +157,7 @@ export default class SwaggerClient {
     return {
       method: op.method,
       headers,
-      body
+      data: body
     }
   }
 }

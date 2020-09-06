@@ -52,6 +52,7 @@ export default class Swagger {
   }
 
   fetch(url: string, options: FetchOptions): Promise<any> {
+    options.url = url;
     return this._httpClient.request(options);
   }
 

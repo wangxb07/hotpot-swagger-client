@@ -14,9 +14,10 @@ export type Method =
   | 'unlink' | 'UNLINK'
 
 export interface FetchOptions {
+  url?: string;
   method?: Method;
   headers?: any;
-  body?: any;
+  data?: any;
   mode?: "cors" | "no-cors" | "same-origin";
   credentials?: "omit" | "same-origin" | "include";
   cache?: "default" | "no-store" | "reload" | "no-cache" | "force-cache" | "only-if-cached";
